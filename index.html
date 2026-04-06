@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NRI & OCI Taxation Guide — India Residency Rules</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --card: #ffffff;
+    --accent: #1a5c3a;
+    --accent-light: #e8f0eb;
+    --accent-dark: #134a2e;
+    --danger: #c0392b;
+    --danger-light: #fce8e6;
+    --warn: #d4880f;
+    --warn-light: #fef6e7;
+    --safe: #1a5c3a;
+    --safe-light: #e8f0eb;
+    --info: #2563eb;
+    --info-light: #eff6ff;
+    --text: #1a1a1a;
+    --text-muted: #5a5a5a;
+    --border: #e0ddd6;
+    --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 4px 12px rgba(0,0,0,0.04);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 24px 16px;
+  }
+
+  .container { max-width: 940px; margin: 0 auto; }
+
+  /* Header */
+  .header {
+    margin-bottom: 32px;
+    border-bottom: 3px solid var(--accent);
+    padding-bottom: 20px;
+  }
+
+  h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 6px;
+    letter-spacing: -0.02em;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin-bottom: 8px;
+  }
+
+  .badge-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+  }
+
+  .badge-green { background: var(--safe-light); color: var(--safe); }
+  .badge-blue { background: var(--info-light); color: var(--info); }
+
+  /* Section Titles */
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem;
+    color: var(--accent);
+    margin: 40px 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .section-title .num {
+    background: var(--accent);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .section-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+  }
+
+  /* Cards & Tables */
+  .card {
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.86rem;
+  }
+
+  thead th {
+    background: var(--accent);
+    color: white;
+    padding: 11px 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  thead th.col-highlight {
+    background: var(--accent-dark);
+  }
+
+  tbody td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: #fafaf7; }
+
+  .tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 0.73rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .tag-safe { background: var(--safe-light); color: var(--safe); }
+  .tag-warn { background: var(--warn-light); color: var(--warn); }
+  .tag-danger { background: var(--danger-light); color: var(--danger); }
+  .tag-info { background: var(--info-light); color: var(--info); }
+  .tag-na { background: #f0f0ee; color: #888; }
+
+  /* Notes */
+  .note {
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 0.87rem;
+    margin: 16px 0;
+    line-height: 1.55;
+  }
+
+  .note-safe { background: var(--safe-light); border-left: 4px solid var(--safe); }
+  .note-warn { background: var(--warn-light); border-left: 4px solid var(--warn); }
+  .note-danger { background: var(--danger-light); border-left: 4px solid var(--danger); }
+  .note-info { background: var(--info-light); border-left: 4px solid var(--info); }
+
+  .note strong { display: block; margin-bottom: 4px; }
+
+  /* Comparison Box */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 16px 0;
+  }
+
+  .compare-box {
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    border-top: 4px solid var(--accent);
+  }
+
+  .compare-box.alt { border-top-color: var(--info); }
+
+  .compare-box h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .compare-box .icon {
+    font-size: 1.3rem;
+  }
+
+  .compare-item {
+    font-size: 0.85rem;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .compare-item:last-child { border-bottom: none; }
+  .compare-label { color: var(--text-muted); }
+  .compare-value { font-weight: 600; text-align: right; }
+
+  /* Scenarios */
+  .scenario-card {
+    background: var(--card);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    margin-bottom: 16px;
+    border-left: 5px solid var(--border);
+  }
+
+  .scenario-card.safe { border-left-color: var(--safe); }
+  .scenario-card.warn { border-left-color: var(--warn); }
+  .scenario-card.danger { border-left-color: var(--danger); }
+
+  .scenario-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .scenario-header h3 {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  .scenario-meta {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .scenario-detail {
+    font-size: 0.86rem;
+    color: var(--text-muted);
+    margin-bottom: 5px;
+  }
+
+  .scenario-detail span { color: var(--text); font-weight: 600; }
+
+  .result {
+    margin-top: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.86rem;
+    font-weight: 500;
+  }
+
+  .result-safe { background: var(--safe-light); color: var(--safe); }
+  .result-warn { background: var(--warn-light); color: var(--warn); }
+  .result-danger { background: var(--danger-light); color: var(--danger); }
+
+  /* Ideal box */
+  .ideal-box {
+    background: linear-gradient(135deg, #1a5c3a 0%, #2d7a50 100%);
+    color: white;
+    border-radius: 14px;
+    padding: 28px;
+    margin: 24px 0;
+    box-shadow: 0 6px 24px rgba(26,92,58,0.2);
+  }
+
+  .ideal-box h3 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+  }
+
+  .ideal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
+
+  .ideal-card {
+    background: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    padding: 16px;
+    border: 1px solid rgba(255,255,255,0.15);
+  }
+
+  .ideal-card .label {
+    font-size: 0.78rem;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 4px;
+  }
+
+  .ideal-card .big {
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+
+  .ideal-card .sub {
+    font-size: 0.82rem;
+    opacity: 0.85;
+    margin-top: 4px;
+  }
+
+  .ideal-box ul {
+    padding-left: 20px;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    opacity: 0.9;
+  }
+
+  .ideal-box li { margin-bottom: 4px; }
+
+  /* Flowchart */
+  .flow-container {
+    padding: 20px;
+    overflow-x: auto;
+  }
+
+  .flow-row {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  .flow-step {
+    background: var(--accent-light);
+    border: 2px solid var(--accent);
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    min-width: 110px;
+    color: var(--accent);
+  }
+
+  .flow-step.highlight {
+    background: var(--accent);
+    color: white;
+  }
+
+  .flow-step.danger-step {
+    background: var(--danger-light);
+    border-color: var(--danger);
+    color: var(--danger);
+  }
+
+  .flow-step.warn-step {
+    background: var(--warn-light);
+    border-color: var(--warn);
+    color: var(--warn);
+  }
+
+  .flow-step.safe-step {
+    background: var(--safe-light);
+    border-color: var(--safe);
+    color: var(--safe);
+  }
+
+  .flow-arrow {
+    font-size: 1.3rem;
+    color: var(--accent);
+    padding: 0 5px;
+    flex-shrink: 0;
+  }
+
+  .flow-label {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 2px;
+  }
+
+  /* Footer */
+  .footer-note {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin-top: 36px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+    line-height: 1.6;
+  }
+
+  /* DTAA section */
+  .dtaa-box {
+    background: var(--info-light);
+    border: 1px solid #bfdbfe;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px 0;
+  }
+
+  .dtaa-box h4 {
+    color: var(--info);
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .dtaa-box p {
+    font-size: 0.86rem;
+    color: var(--text);
+    line-height: 1.6;
+  }
+
+  @media (max-width: 680px) {
+    h1 { font-size: 1.5rem; }
+    .compare-grid { grid-template-columns: 1fr; }
+    .ideal-grid { grid-template-columns: 1fr; }
+    table { font-size: 0.8rem; }
+    thead th, tbody td { padding: 8px 10px; }
+    .ideal-card .big { font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>India Tax Residency &amp; NRI/OCI Guide</h1>
+    <p class="subtitle">How your citizenship, days in India, and Indian income determine whether your worldwide earnings become taxable in India</p>
+    <div class="badge-row">
+      <span class="badge badge-green">🇮🇳 Indian Citizens Abroad</span>
+      <span class="badge badge-blue">🇺🇸 US Citizens / OCI Holders</span>
+      <span class="badge badge-green">Covers Income Tax Act 1961 + Bill 2025</span>
+    </div>
+  </div>
+
+  <!-- SECTION 1: Three Statuses -->
+  <div class="section-title"><span class="num">1</span> The Three Tax Residency Statuses</div>
+  <p class="section-desc">India taxes you based on your residency status — not your citizenship or passport. Status must be determined fresh each financial year (April 1 – March 31).</p>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:18%">Status</th>
+          <th style="width:38%">Who Qualifies</th>
+          <th style="width:22%">What's Taxed in India</th>
+          <th style="width:22%">What's NOT Taxed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>NRI</strong><br><span style="font-size:0.75rem;color:var(--text-muted)">Non-Resident</span></td>
+          <td>Does not meet any residency condition for the FY</td>
+          <td>Only income earned or received <em>in India</em> (Indian rent, capital gains on Indian assets, NRO interest, etc.)</td>
+          <td>All overseas income — salary, investments, retirement accounts</td>
+        </tr>
+        <tr>
+          <td><strong>RNOR</strong><br><span style="font-size:0.75rem;color:var(--text-muted)">Resident but Not Ordinarily Resident</span></td>
+          <td>Meets a residency condition BUT was NRI for 9 of last 10 years, or stayed ≤ 729 days in India in last 7 years</td>
+          <td>Only Indian-sourced income (same as NRI)</td>
+          <td>Overseas income remains exempt (unless from a business controlled in India)</td>
+        </tr>
+        <tr>
+          <td><strong>ROR</strong><br><span style="font-size:0.75rem;color:var(--text-muted)">Resident &amp; Ordinarily Resident</span></td>
+          <td>Meets residency condition AND fails both RNOR tests</td>
+          <td><strong style="color:var(--danger)">Worldwide income</strong> — everything globally</td>
+          <td>Nothing is exempt (DTAA relief may apply)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 2: Citizenship matters -->
+  <div class="section-title"><span class="num">2</span> How Citizenship Changes the Rules</div>
+  <p class="section-desc">This is the most commonly misunderstood part. The day-count thresholds differ based on whether you hold an Indian passport or a foreign passport (OCI/PIO).</p>
+
+  <div class="compare-grid">
+    <div class="compare-box">
+      <h3><span class="icon">🇮🇳</span> Indian Citizen Abroad</h3>
+      <div class="compare-item">
+        <span class="compare-label">Primary safe limit</span>
+        <span class="compare-value">181 days</span>
+      </div>
+      <div class="compare-item">
+        <span class="compare-label">60-day rule applies?</span>
+        <span class="compare-value"><span class="tag tag-safe">NO</span><br><span style="font-size:0.73rem;color:var(--text-muted)">Exempt if left India for employment</span></span>
+      </div>
+      <div class="compare-item">
+        <span class="compare-label">120-day rule (if Indian income ≥ ₹15L)</span>
+        <span class="compare-value"><span class="tag tag-warn">YES</span></span>
+      </div>
+      <div class="compare-item">
+        <span class="compare-label">Deemed resident rule</span>
+        <span class="compare-value"><span class="tag tag-danger">YES</span><br><span style="font-size:0.73rem;color:var(--text-muted)">If ₹15L+ Indian income &amp; not taxed anywhere</span></span>
+      </div>
+    </div>
+    <div class="compare-box alt">
+      <h3><span class="icon">🇺🇸</span> US Citizen / OCI Holder</h3>
+      <div class="compare-item">
+        <span class="compare-label">Primary safe limit (income &lt; ₹15L)</span>
+        <span class="compare-value" style="color:var(--safe);font-size:1.05rem">181 days</span>
+      </div>
+      <div class="compare-item">
+        <span class="compare-label">60-day rule applies?</span>
+        <span class="compare-value"><span class="tag tag-safe">NO</span><br><span style="font-size:0.73rem;color:var(--text-muted)">PIOs/OCIs visiting India are exempt if income &lt; ₹15L</span></span>
+      </div>
+      <div class="compare-item">
+        <span class="compare-label">120-day rule (if Indian income ≥ ₹15L)</span>
+        <span class="compare-value"><span class="tag tag-warn">YES</span><br><span style="font-size:0.73rem;color:var(--text-muted)">+ need 365 days in prior 4 FYs</span></span>
+      </div>
+      <div class="compare-item">
+        <span class="compare-label">Deemed resident rule</span>
+        <span class="compare-value"><span class="tag tag-safe">NO</span><br><span style="font-size:0.73rem;color:var(--text-muted)">Only applies to Indian citizens</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="note note-info">
+    <strong>💡 Key Takeaway for OCI Holders</strong>
+    As a US citizen with OCI, you get the best of both worlds: (a) the 60-day rule doesn't apply to you when Indian income is under ₹15 lakh, giving you a comfortable 181-day window, and (b) the "deemed resident" provision — which can make someone resident even with zero days in India — applies only to Indian citizens, not you.
+  </div>
+
+  <!-- SECTION 3: The Rules in Detail -->
+  <div class="section-title"><span class="num">3</span> All Residency Tests — Detailed Breakdown</div>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th style="width:15%">Rule</th>
+          <th style="width:28%">Condition</th>
+          <th style="width:22%">Applies To</th>
+          <th style="width:15%">Result</th>
+          <th style="width:20%">Your Risk (OCI, USA)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>182-Day Rule</strong></td>
+          <td>Present in India ≥ 182 days in a financial year</td>
+          <td>Everyone — no exceptions</td>
+          <td><span class="tag tag-danger">Resident</span></td>
+          <td>Avoid. Hard limit for everyone.</td>
+        </tr>
+        <tr>
+          <td><strong>60-Day Rule</strong></td>
+          <td>≥ 60 days in FY AND ≥ 365 days in prior 4 FYs</td>
+          <td>General individuals only. <strong>NOT</strong> Indian citizens going abroad for employment. <strong>NOT</strong> PIOs/OCIs visiting India with income &lt; ₹15L.</td>
+          <td><span class="tag tag-danger">Resident</span></td>
+          <td><span class="tag tag-safe">Does NOT apply to you</span></td>
+        </tr>
+        <tr>
+          <td><strong>120-Day Rule</strong><br><span style="font-size:0.73rem">(from FY 2020-21)</span></td>
+          <td>≥ 120 days in FY <strong>AND</strong> ≥ 365 days in prior 4 FYs <strong>AND</strong> Indian income (excl. foreign) &gt; ₹15 lakh</td>
+          <td>Indian citizens &amp; PIOs/OCIs with high Indian income</td>
+          <td><span class="tag tag-warn">RNOR</span></td>
+          <td>Relevant only when your Indian income crosses ₹15L</td>
+        </tr>
+        <tr>
+          <td><strong>Deemed Resident</strong></td>
+          <td>Indian citizen + Indian income &gt; ₹15L + <strong>not liable to tax in any other country</strong></td>
+          <td>Indian citizens only (targets those in tax-free jurisdictions like UAE, etc.)</td>
+          <td><span class="tag tag-warn">RNOR</span></td>
+          <td><span class="tag tag-safe">Does NOT apply</span><br><span style="font-size:0.73rem;color:var(--text-muted)">You're a US citizen taxed in US</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 4: RNOR Safety Net -->
+  <div class="section-title"><span class="num">4</span> The RNOR Safety Net</div>
+  <p class="section-desc">Even if you accidentally trigger "Resident" status, RNOR protects your overseas income from Indian taxation. You qualify for RNOR if you meet <em>either</em> condition below.</p>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>RNOR Condition</th>
+          <th>What It Means</th>
+          <th>Practical Check</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>9-out-of-10 Year Test</strong></td>
+          <td>You were NRI in at least 9 of the 10 financial years preceding the current FY</td>
+          <td>If you've been in the US for 9+ years, you pass this. Even 1 year as resident in last 10 is okay.</td>
+        </tr>
+        <tr>
+          <td><strong>729-Day Test</strong></td>
+          <td>Total physical presence in India ≤ 729 days during the 7 FYs preceding the current FY</td>
+          <td>That's roughly 104 days/year average. If you visit 90 days/year for 7 years = 630 days — safe. At 110 days/year = 770 days — unsafe.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note note-warn">
+    <strong>⚠️ RNOR is a safety net, not a strategy</strong>
+    RNOR protects your overseas income, which is great. But it's temporary — once you've been visiting India frequently for many years, you'll eventually fail both tests and become full ROR. Use it as a backup, not your primary plan.
+  </div>
+
+  <!-- SECTION 5: Flowchart -->
+  <div class="section-title"><span class="num">5</span> Decision Flowchart</div>
+  <p class="section-desc">Follow this to determine your status for any financial year.</p>
+  <div class="card">
+    <div class="flow-container">
+      <div class="flow-row">
+        <div class="flow-step highlight">Days in India<br>this FY?</div>
+        <div class="flow-arrow">→</div>
+        <div>
+          <div class="flow-step safe-step">&lt; 120 days</div>
+          <div class="flow-label">NRI ✅ (always safe)</div>
+        </div>
+      </div>
+      <div class="flow-row" style="margin-top:8px">
+        <div style="width:130px"></div>
+        <div class="flow-arrow">↓</div>
+        <div style="font-size:0.78rem;color:var(--text-muted);padding:4px 8px">120–181 days</div>
+      </div>
+      <div class="flow-row">
+        <div class="flow-step highlight">Indian income<br>≥ ₹15 lakh?</div>
+        <div class="flow-arrow">→</div>
+        <div>
+          <div class="flow-step safe-step">No → NRI ✅</div>
+          <div class="flow-label">Income &lt; ₹15L? Stay up to 181 days safely</div>
+        </div>
+      </div>
+      <div class="flow-row" style="margin-top:8px">
+        <div style="width:130px"></div>
+        <div class="flow-arrow">↓</div>
+        <div style="font-size:0.78rem;color:var(--text-muted);padding:4px 8px">Yes (₹15L+) + 365 days in prior 4 FYs</div>
+      </div>
+      <div class="flow-row">
+        <div class="flow-step warn-step">RNOR ⚠️</div>
+        <div style="font-size:0.78rem;color:var(--text-muted);padding:4px 12px">Indian income taxed.<br>Overseas income still exempt.</div>
+      </div>
+      <div style="text-align:center;margin:14px 0 6px;font-size:0.82rem;color:var(--text-muted)">— If 182+ days in India —</div>
+      <div class="flow-row">
+        <div class="flow-step danger-step">≥ 182 days<br>= Resident</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-step highlight" style="font-size:0.78rem">Check RNOR<br>(9/10 yrs or ≤729 days)</div>
+        <div class="flow-arrow">→</div>
+        <div>
+          <div class="flow-step warn-step">Pass → RNOR</div>
+          <div class="flow-label" style="margin-bottom:6px">Overseas income exempt</div>
+          <div class="flow-step danger-step">Fail → ROR ❌</div>
+          <div class="flow-label">Worldwide income taxable</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 6: Safe Stay Table -->
+  <div class="section-title"><span class="num">6</span> Safe Stay Limits — Quick Reference</div>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Your Situation</th>
+          <th>Indian Income</th>
+          <th>Safe Stay / FY</th>
+          <th>Risk Level</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-info">OCI / US citizen</span></td>
+          <td>&lt; ₹15 lakh</td>
+          <td><strong>Up to 181 days</strong></td>
+          <td><span class="tag tag-safe">Very Low</span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-info">OCI / US citizen</span></td>
+          <td>≥ ₹15 lakh</td>
+          <td><strong>Up to 119 days</strong></td>
+          <td><span class="tag tag-warn">Moderate</span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-safe">Indian citizen, employed abroad</span></td>
+          <td>&lt; ₹15 lakh</td>
+          <td><strong>Up to 181 days</strong></td>
+          <td><span class="tag tag-safe">Very Low</span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-safe">Indian citizen, employed abroad</span></td>
+          <td>≥ ₹15 lakh</td>
+          <td><strong>Up to 119 days</strong></td>
+          <td><span class="tag tag-warn">Moderate</span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-na">General individual</span> (not employed abroad, not PIO/OCI)</td>
+          <td>Any</td>
+          <td><strong>Up to 59 days</strong><br><span style="font-size:0.73rem;color:var(--text-muted)">If ≥ 365 days in prior 4 FYs</span></td>
+          <td><span class="tag tag-danger">High</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note note-safe">
+    <strong>🔑 The 729-Day Budget (applies to everyone)</strong>
+    Regardless of citizenship, keep your cumulative India stays over any rolling 7-year window under 729 days. This preserves your RNOR safety net. At 100 days/year you accumulate 700 days over 7 years — safe. At 110 days/year you hit 770 — you've lost the backup protection.
+  </div>
+
+  <!-- SECTION 7: Scenarios -->
+  <div class="section-title"><span class="num">7</span> Real-World Scenarios</div>
+  <p class="section-desc">Covering both Indian citizens abroad and OCI holders in the USA.</p>
+
+  <div class="scenario-card safe">
+    <div class="scenario-header">
+      <h3>Scenario A: OCI Holder, Comfortable Family Visits</h3>
+      <div class="scenario-meta">
+        <span class="tag tag-info">US Citizen / OCI</span>
+        <span class="tag tag-safe">NRI — Safe</span>
+      </div>
+    </div>
+    <div class="scenario-detail">Days in India: <span>90 days/year</span> for 5 years</div>
+    <div class="scenario-detail">Indian income: <span>₹5 lakh</span> (NRO interest + small rental)</div>
+    <div class="scenario-detail">7-year cumulative: <span>~450 days (well under 729)</span></div>
+    <div class="result result-safe">✅ Comfortably NRI. Under 182 days, income under ₹15L — no rule triggers. RNOR safety net intact. Only Indian income taxed.</div>
+  </div>
+
+  <div class="scenario-card safe">
+    <div class="scenario-header">
+      <h3>Scenario B: OCI Holder, Extended 5-Month Stay</h3>
+      <div class="scenario-meta">
+        <span class="tag tag-info">US Citizen / OCI</span>
+        <span class="tag tag-safe">NRI — Safe</span>
+      </div>
+    </div>
+    <div class="scenario-detail">Days in India: <span>150 days</span> (long stay to care for aging parents)</div>
+    <div class="scenario-detail">Indian income: <span>₹8 lakh</span> (rental income)</div>
+    <div class="scenario-detail">This is the year: <span>One-time extended visit</span></div>
+    <div class="result result-safe">✅ Still NRI! Since Indian income is under ₹15L, the 120-day rule doesn't trigger. You're under 182 days. The 60-day rule doesn't apply to OCI holders with income &lt; ₹15L. Perfectly safe.</div>
+  </div>
+
+  <div class="scenario-card warn">
+    <div class="scenario-header">
+      <h3>Scenario C: OCI Holder, Income Crosses ₹15 Lakh</h3>
+      <div class="scenario-meta">
+        <span class="tag tag-info">US Citizen / OCI</span>
+        <span class="tag tag-warn">RNOR — Caution</span>
+      </div>
+    </div>
+    <div class="scenario-detail">Days in India: <span>130 days</span></div>
+    <div class="scenario-detail">Indian income: <span>₹18 lakh</span> (rental + capital gains from property sale)</div>
+    <div class="scenario-detail">Past 4 years in India: <span>400 days (exceeds 365)</span></div>
+    <div class="scenario-detail">NRI history: <span>NRI for 10 of last 10 years</span></div>
+    <div class="result result-warn">⚠️ The 120-day rule triggers — you become a "Deemed Resident." But since you've been NRI for 9+/10 years, you qualify as RNOR. Your US salary, 401(k), and stock gains stay untaxed in India. Only the ₹18L Indian income is taxable.</div>
+  </div>
+
+  <div class="scenario-card safe">
+    <div class="scenario-header">
+      <h3>Scenario D: Indian Citizen, Working in USA</h3>
+      <div class="scenario-meta">
+        <span class="tag tag-safe">Indian Citizen</span>
+        <span class="tag tag-safe">NRI — Safe</span>
+      </div>
+    </div>
+    <div class="scenario-detail">Days in India: <span>80 days/year</span></div>
+    <div class="scenario-detail">Indian income: <span>₹3 lakh</span> (FD interest)</div>
+    <div class="scenario-detail">Left India for employment: <span>Yes (H-1B → Green Card holder, Indian passport)</span></div>
+    <div class="result result-safe">✅ NRI. The 60-day rule is exempt for Indian citizens who left for employment abroad. Under 182 days. No risk at all.</div>
+  </div>
+
+  <div class="scenario-card warn">
+    <div class="scenario-header">
+      <h3>Scenario E: Indian Citizen, Not Taxed Anywhere (UAE)</h3>
+      <div class="scenario-meta">
+        <span class="tag tag-safe">Indian Citizen</span>
+        <span class="tag tag-warn">Deemed Resident</span>
+      </div>
+    </div>
+    <div class="scenario-detail">Days in India: <span>0 days</span></div>
+    <div class="scenario-detail">Indian income: <span>₹20 lakh</span> (business income)</div>
+    <div class="scenario-detail">Resides in: <span>UAE (no income tax)</span></div>
+    <div class="result result-warn">⚠️ Deemed Resident! Even with ZERO days in India, the deemed residency rule makes this person a resident (RNOR status) because they're an Indian citizen with ₹15L+ Indian income and not taxed in any other country. Note: This rule would NOT apply if this person were a US citizen with OCI — it's for Indian citizens only.</div>
+  </div>
+
+  <div class="scenario-card danger">
+    <div class="scenario-header">
+      <h3>Scenario F: OCI Holder, Gradual Overexposure</h3>
+      <div class="scenario-meta">
+        <span class="tag tag-info">US Citizen / OCI</span>
+        <span class="tag tag-danger">ROR — Danger</span>
+      </div>
+    </div>
+    <div class="scenario-detail">Pattern: <span>Year 1–4: 60 days → Year 5–8: 110 days → Year 9: 190 days</span></div>
+    <div class="scenario-detail">Indian income in Yr 9: <span>₹22 lakh</span> (sold a property)</div>
+    <div class="scenario-detail">7-year cumulative (Yrs 2–8): <span>60×3 + 110×4 = 620 days — under 729 ✓</span></div>
+    <div class="scenario-detail">9/10 NRI test: <span>NRI for 8 of 10 — fails! (was Resident in Yr 9, and was borderline another year)</span></div>
+    <div class="result result-danger">❌ Year 9 is dangerous. 190 days makes you Resident. If you fail both RNOR tests (not NRI for 9/10 years AND over 729 cumulative days), you become full ROR — worldwide income including US salary, 401(k), dividends, everything becomes taxable in India. You'd need to rely on DTAA for relief.</div>
+  </div>
+
+  <div class="scenario-card danger">
+    <div class="scenario-header">
+      <h3>Scenario G: Indian Citizen, Family Emergency Overstay</h3>
+      <div class="scenario-meta">
+        <span class="tag tag-safe">Indian Citizen</span>
+        <span class="tag tag-danger">ROR — Danger</span>
+      </div>
+    </div>
+    <div class="scenario-detail">Days in India this year: <span>200 days</span> (parent's long illness)</div>
+    <div class="scenario-detail">Prior 7 years: <span>Visited 115 days/year = 805 days (exceeds 729)</span></div>
+    <div class="scenario-detail">NRI in last 10 years: <span>Only 7 out of 10 (fails 9/10 test)</span></div>
+    <div class="result result-danger">❌ Full ROR. Worldwide income — US salary, retirement accounts, investment gains — all taxable in India. The 115 days/year seemed safe individually but compounded to destroy the 729-day safety net.</div>
+  </div>
+
+  <!-- SECTION 8: Ideal Stay -->
+  <div class="section-title"><span class="num">8</span> Recommended Safe Stay Strategy</div>
+
+  <div class="ideal-box">
+    <h3>Your Ideal Days in India per Financial Year</h3>
+    <div class="ideal-grid">
+      <div class="ideal-card">
+        <div class="label">When Indian Income &lt; ₹15 Lakh</div>
+        <div class="big">&lt; 150 days</div>
+        <div class="sub">Technically safe up to 181, but buffer for miscounts and flight delays. Gives you ~5 months with family.</div>
+      </div>
+      <div class="ideal-card">
+        <div class="label">When Indian Income ≥ ₹15 Lakh</div>
+        <div class="big">&lt; 110 days</div>
+        <div class="sub">Technically safe up to 119, but keep a 10-day buffer. That's ~3.5 months with family.</div>
+      </div>
+    </div>
+    <ul>
+      <li><strong>The golden rule:</strong> Keep 7-year cumulative India stays under 729 days (~100 days/year avg) to always maintain RNOR as backup</li>
+      <li><strong>Count carefully:</strong> Both arrival and departure dates count as days in India</li>
+      <li><strong>Split trips across FYs:</strong> A visit spanning March–April splits days between two financial years — plan strategically</li>
+      <li><strong>Never, ever cross 181 days</strong> in any single FY — that's the absolute hard limit for everyone</li>
+      <li><strong>Track Indian income:</strong> Know if rental income + capital gains + NRO interest approaches ₹15 lakh — it changes your threshold from 181 to 119 days</li>
+    </ul>
+  </div>
+
+  <!-- SECTION 9: Risk Heat Map -->
+  <div class="section-title"><span class="num">9</span> Days-in-India Risk Heat Map</div>
+  <div class="card">
+    <table>
+      <thead>
+        <tr>
+          <th>Days/Year</th>
+          <th>Income &lt; ₹15L</th>
+          <th>Income ≥ ₹15L</th>
+          <th>Watch Out For</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>&lt; 60</strong></td>
+          <td><span class="tag tag-safe">Zero Risk</span></td>
+          <td><span class="tag tag-safe">Zero Risk</span></td>
+          <td>Nothing. Safe under every possible rule.</td>
+        </tr>
+        <tr>
+          <td><strong>60–119</strong></td>
+          <td><span class="tag tag-safe">Very Low</span></td>
+          <td><span class="tag tag-safe">Low</span></td>
+          <td>Below all thresholds. Just monitor 729-day cumulative over 7 years.</td>
+        </tr>
+        <tr>
+          <td><strong>120–149</strong></td>
+          <td><span class="tag tag-safe">Low</span></td>
+          <td><span class="tag tag-warn">Moderate</span></td>
+          <td>If income hits ₹15L+ and 365+ days in prior 4 FYs → RNOR. Overseas income still safe, but you're on the radar.</td>
+        </tr>
+        <tr>
+          <td><strong>150–181</strong></td>
+          <td><span class="tag tag-warn">Caution</span></td>
+          <td><span class="tag tag-warn">Elevated</span></td>
+          <td>Dangerously close to 182. Delays, miscounts, or a calendar error can push you over. ₹15L+ income triggers RNOR via 120-day rule.</td>
+        </tr>
+        <tr>
+          <td><strong>182+</strong></td>
+          <td><span class="tag tag-danger">Resident</span></td>
+          <td><span class="tag tag-danger">Resident</span></td>
+          <td>You're Resident. If RNOR tests pass → overseas income exempt. If both tests fail → ROR → worldwide income taxable.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTION 10: DTAA -->
+  <div class="section-title"><span class="num">10</span> Double Taxation: India-USA DTAA</div>
+  <div class="dtaa-box">
+    <h4>🤝 India-USA Double Taxation Avoidance Agreement</h4>
+    <p>
+      If you ever become ROR (worldwide income taxable in India), the DTAA between India and USA prevents you from being taxed twice on the same income. You can claim a Foreign Tax Credit in India for taxes already paid to the US (or vice versa) using Form 67. However, DTAA is a relief mechanism, not a prevention — you'd still need to file returns in both countries and the process is cumbersome. The smartest approach is to avoid becoming ROR in the first place.
+    </p>
+  </div>
+
+  <div class="note note-info">
+    <strong>📋 Practical Checklist</strong>
+    ✓ Maintain a travel log: record every India entry and exit date, keep boarding passes and passport stamps<br>
+    ✓ Track your Indian income: rental, capital gains, NRO interest, FD — know when it approaches ₹15 lakh<br>
+    ✓ Check status each March: before the FY ends on March 31, count your days<br>
+    ✓ Plan trips around the April 1 boundary: a Dec–Mar trip and an Apr–Jun trip splits days across two FYs<br>
+    ✓ Consult a CA if selling Indian property: a single large capital gain can push you over the ₹15L threshold<br>
+    ✓ Review your 7-year cumulative annually: this protects your RNOR safety net
+  </div>
+
+  <div class="footer-note">
+    Based on the Income Tax Act, 1961 (as amended by Finance Act 2020) and the Income Tax Bill 2025 (effective April 1, 2026).<br>
+    Financial year in India runs April 1 to March 31. All day-counts include both arrival and departure days.<br>
+    <strong>Disclaimer:</strong> This guide is for educational and informational purposes only. It is not legal, tax, or financial advice. Tax laws are complex and individual circumstances vary — always consult a qualified Chartered Accountant or tax advisor for your specific situation.
+  </div>
+
+</div>
+</body>
+</html>
